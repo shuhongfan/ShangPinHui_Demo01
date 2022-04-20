@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
+</head>
+<body>
+    <p>
+        请输入搜索内容： <input type="text">
+    </p>
+    <script>
+        let input = document.querySelector('input')
+
+        // 防抖：前面所有的触发都被取消，最后一次执行，在规定的时间之后才触发
+        input.oninput=_.debounce(function(){
+            console.log('ajax请求')
+        },1000)
+
+    </script>
+</body>
+</html>

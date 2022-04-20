@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
+</head>
+<body>
+    <div>
+        <h1>我是计数器 <span>0</span></h1>
+        <button>点我+1</button>
+    </div>
+    <script>
+        let span = document.querySelector('span')
+        let button = document.querySelector('button')
+        let count = 0
+
+        // 用户频繁操作，但是把频繁的操作变为少量的操作
+        button.onclick = _.throttle(
+            function(){
+                count++
+                span.innerHTML = count
+            },5000
+        )
+
+    </script>
+</body>
+</html>
