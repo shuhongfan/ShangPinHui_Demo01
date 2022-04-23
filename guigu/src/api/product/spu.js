@@ -6,7 +6,7 @@ export const reqSpuList = (page, limit, category3Id) => request({ url: `/admin/p
 
 
 //获取SPU信息
-///admin/product/getSpuById/{spuId}   get   
+///admin/product/getSpuById/{spuId}   get
 export const reqSpu = (spuId) => request({ url: `/admin/product/getSpuById/${spuId}`, method: 'get' });
 
 //获取品牌的信息
@@ -18,7 +18,7 @@ export const reqTradeMarkList = () => request({ url: `/admin/product/baseTradema
 export const reqSpuImageList = (spuId) => request({ url: `/admin/product/spuImageList/${spuId}`, method: 'get' });
 
 //获取平台全部销售属性----整个平台销售属性一共三个
-//GET /admin/product/baseSaleAttrList  
+//GET /admin/product/baseSaleAttrList
 
 export const reqBaseSaleAttrList = () => request({ url: '/admin/product/baseSaleAttrList', method: 'get' });
 
@@ -50,7 +50,7 @@ export const reqSpuSaleAttrList = (spuId)=>request({url:`/admin/product/spuSaleA
 
 
 //获取平台属性的数据
-//GET /admin/product/attrInfoList/{category1Id}/{category2Id}/{category3Id} 
+//GET /admin/product/attrInfoList/{category1Id}/{category2Id}/{category3Id}
 export const reqAttrInfoList = (category1Id,category2Id,category3Id)=>request({url:`/admin/product/attrInfoList/${category1Id}/${category2Id}/${category3Id}`,method:'get'});
 
 
@@ -60,5 +60,5 @@ export const reqAddSku = (skuInfo)=>request({url:'/admin/product/saveSkuInfo',me
 
 
 //获取SKU列表数据的接口
-//GET /admin/product/findBySpuId/{spuId}  
+//GET /admin/product/findBySpuId/{spuId}
 export const reqSkuList = (spuId)=>request({url:`/admin/product/findBySpuId/${spuId}`,method:'get'});
